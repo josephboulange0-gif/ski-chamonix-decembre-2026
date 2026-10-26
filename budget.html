@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget · Week-end ski Chamonix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="site-nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">Ski · Chamonix</a>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="gite.html">Le gîte</a>
+                <a href="programme.html">Programme</a>
+                <a href="domaines.html">Domaines</a>
+                <a href="budget.html" class="active">Budget</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-head">
+        <div class="container">
+            <span class="eyebrow">Gîte + forfait remontées</span>
+            <h1>Le budget</h1>
+            <p>Le gîte est privatisé : le prix est fixe, il se partage entre tous les participants.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="calc reveal">
+                    <div>
+                        <label for="people">Nombre de participants</label>
+                        <div class="n-out"><span id="people-out">15</span></div>
+                        <input type="range" id="people" min="6" max="15" value="15">
+                        <div class="scale"><span>6</span><span>15 (maximum)</span></div>
+                    </div>
+                    <div class="result">
+                        <div class="per"><span id="per-person">114,93 €</span><small> / pers.</small></div>
+                        <div class="total" id="total">Total du devis : 1 724,00 €</div>
+                        <div class="warn" id="warn"></div>
+                    </div>
+                </div>
+
+                <h2 class="h-section" style="margin-top:72px;font-size:2.4rem;">Le détail du devis</h2>
+                <div class="table-wrap reveal">
+                    <table class="devis">
+                        <thead><tr><th>Poste</th><th class="num">Prix</th></tr></thead>
+                        <tbody>
+                            <tr><td>2 nuitées, gîte entièrement privatisé, gestion libre, avec forfait remontées mécaniques vallée de Chamonix<small>Pour 15 personnes maximum · 2 × 825 €</small></td><td class="num">1 650,00 €</td></tr>
+                            <tr><td>Taxe de séjour<small>0,80 € par adulte et par nuit</small></td><td class="num">24,00 €</td></tr>
+                            <tr><td>Adhésion annuelle à l'association (groupe)</td><td class="num">50,00 €</td></tr>
+                            <tr class="sum"><td>Total TTC (pour 15 personnes)</td><td class="num">1 724,00 €</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="note reveal">
+                    <strong>Réservation.</strong> Le devis est valable jusqu'au 2 novembre 2026. Un acompte de 50 % (862 €) est demandé à la validation, le solde à réception de la facture.
+                </div>
+
+                <div class="note reveal">
+                    <strong>À confirmer :</strong> ce que couvre exactement le « forfait remontées mécaniques » du devis (pour tout le groupe ? sur quelle durée ? quels domaines ?). Selon la réponse, le forfait est à ajouter au budget.
+                </div>
+
+                <h2 class="h-section" style="margin-top:72px;font-size:2.4rem;">À prévoir en plus</h2>
+                <div class="list-cols">
+                    <div class="list-col reveal">
+                        <h4>Transport</h4>
+                        <ul><li>Train ou voiture jusqu'à Vallorcine</li><li>Covoiturage à organiser</li><li><span class="tag">montant à définir</span></li></ul>
+                    </div>
+                    <div class="list-col reveal">
+                        <h4>Repas</h4>
+                        <ul><li>Courses du week-end (gestion libre)</li><li>Repas de samedi midi sur les pistes</li><li><span class="tag">montant à définir</span></li></ul>
+                    </div>
+                    <div class="list-col reveal">
+                        <h4>Matériel de ski</h4>
+                        <ul><li>Location pour qui n'a pas son matériel</li><li>Casque recommandé</li><li><span class="tag">montant à définir</span></li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">11-13 décembre 2026 · Vallée de Chamonix</footer>
+    <script src="script.js"></script>
+</body>
+</html>
