@@ -319,3 +319,32 @@ details.how li { margin-bottom: 6px; }
 .wa-card .btn { background: #25a559; border-color: #25a559; color: #fff; }
 .wa-card .btn:hover { background: #1e8a49; border-color: #1e8a49; }
 .section-night .eyebrow.deadline { color: #ffb36b; }
+
+/* Hero photo */
+.hero-photo { position: absolute; inset: 0; background: #0d1830 url('assets/ski-poudreuse.jpg') 62% 40% / cover no-repeat; transform: scaleX(-1); }
+.hero-shade { position: absolute; inset: 0; z-index: 1;
+    background:
+        linear-gradient(90deg, rgba(7,13,26,0.92) 0%, rgba(8,15,30,0.74) 38%, rgba(10,20,40,0.22) 72%, rgba(10,20,40,0.12) 100%),
+        linear-gradient(180deg, rgba(7,13,26,0.55) 0%, rgba(7,13,26,0) 30%, rgba(7,13,26,0) 70%, rgba(12,21,38,0.95) 100%); }
+.hero-content { padding: 130px 0 120px; }
+.hero h1 { max-width: 620px; }
+.btn-wa { background: #25a559; border-color: #25a559; color: #fff; }
+.btn-wa:hover { background: #1e8a49; border-color: #1e8a49; }
+.hero-content .btn { margin-bottom: 12px; }
+.nav-links a.nav-cta { background: #25a559; color: #fff; padding: 8px 18px; border-bottom: none; }
+.nav-links a.nav-cta:hover { background: #1e8a49; color: #fff; }
+
+/* Bandeau ski */
+.ski-banner { position: relative; height: 460px; overflow: hidden; }
+.ski-banner-photo { position: absolute; inset: 0; background: url('assets/ski-rando.jpg') 50% 42% / cover no-repeat; }
+.ski-banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,21,38,0.15) 0%, rgba(12,21,38,0.75) 100%); }
+.ski-banner-text { position: absolute; z-index: 2; left: 0; right: 0; bottom: 48px; text-align: center; color: #fff; padding: 0 28px; }
+.ski-banner-text .eyebrow { color: var(--ember); }
+.ski-banner-text p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: clamp(1.7rem, 3.6vw, 2.8rem); text-shadow: 0 2px 18px rgba(6,12,24,0.8); }
+@media (max-width: 860px) {
+    .hero-photo { background-position: 58% 40%; }
+    .hero-shade { background: linear-gradient(180deg, rgba(7,13,26,0.7) 0%, rgba(8,15,30,0.78) 55%, rgba(12,21,38,0.95) 100%); }
+    .hero-content { padding: 70px 0 80px; }
+    .ski-banner { height: 320px; }
+    .nav-links a.nav-cta { padding: 6px 14px; }
+}
