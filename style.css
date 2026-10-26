@@ -348,3 +348,9 @@ details.how li { margin-bottom: 6px; }
     .ski-banner { height: 320px; }
     .nav-links a.nav-cta { padding: 6px 14px; }
 }
+
+/* Sur téléphone, le QR code ne sert à rien (on ne peut pas scanner son propre écran) : on garde le bouton */
+@media (max-width: 860px) {
+    .wa-card img { display: none; }
+    .wa-card { padding: 22px 24px; }
+}
