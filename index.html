@@ -6,14 +6,14 @@
     <title>Week-end ski · Vallée de Chamonix · 11-13 décembre 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="site-nav">
         <div class="container nav-inner">
-            <a href="index.html" class="nav-logo">Ski · Chamonix</a>
+            <a href="index.html" class="nav-logo">Ski <span>·</span> Chamonix</a>
             <div class="nav-links">
                 <a href="index.html" class="active">Accueil</a>
                 <a href="gite.html">Le gîte</a>
@@ -25,103 +25,155 @@
     </nav>
 
     <header class="hero">
-        <svg class="hero-ridges" viewBox="0 0 1440 600" preserveAspectRatio="none" aria-hidden="true">
+        <div class="stars"></div>
+        <svg class="hero-scene" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
             <defs>
-                <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0" stop-color="#dbe8f3"/>
-                    <stop offset="0.45" stop-color="#7f9fbd"/>
-                    <stop offset="1" stop-color="#3b5a7a"/>
-                </linearGradient>
-                <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0" stop-color="#4c6c8c"/>
-                    <stop offset="1" stop-color="#1c3550"/>
-                </linearGradient>
+                <linearGradient id="far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9db6d6"/><stop offset="0.5" stop-color="#4a6a95"/><stop offset="1" stop-color="#1d3153"/></linearGradient>
+                <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34507a"/><stop offset="1" stop-color="#101d36"/></linearGradient>
+                <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fa9cc"/><stop offset="0.35" stop-color="#4a6a9a"/><stop offset="1" stop-color="#1a2d4e"/></linearGradient>
+                <filter id="gl" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <symbol id="pine" viewBox="-40 0 80 132"><path d="M0,0 L-22,45 L-10,45 L-30,85 L-14,85 L-38,130 L38,130 L14,85 L30,85 L10,45 L22,45 Z"/></symbol>
             </defs>
-            <path fill="url(#far)" d="M0,330 L90,290 L170,310 L260,230 L330,270 L430,190 L500,240 L610,160 L690,210 L790,120 L850,180 L940,150 L1030,220 L1110,170 L1200,240 L1290,200 L1370,250 L1440,230 L1440,600 L0,600 Z"/>
-            <path fill="url(#mid)" d="M0,400 L110,350 L210,390 L320,300 L390,340 L480,280 L560,330 L660,250 L740,310 L850,260 L930,320 L1040,270 L1120,330 L1230,290 L1330,350 L1440,320 L1440,600 L0,600 Z"/>
-            <path fill="#0c1a2b" d="M0,480 L140,440 L260,470 L380,420 L520,465 L640,435 L780,480 L920,445 L1060,485 L1190,450 L1320,490 L1440,460 L1440,600 L0,600 Z"/>
+            <path fill="url(#far)" d="M0,300 L80,260 L150,285 L240,200 L300,240 L390,150 L450,205 L540,120 L600,185 L690,110 L760,190 L850,140 L920,215 L1010,170 L1080,240 L1170,190 L1250,250 L1340,215 L1440,260 L1440,600 L0,600Z"/>
+            <path fill="url(#mid)" d="M0,380 L100,340 L200,372 L300,310 L380,350 L470,290 L560,345 L660,300 L760,360 L860,320 L960,372 L1060,330 L1160,380 L1260,345 L1360,385 L1440,360 L1440,600 L0,600Z"/>
+            <path fill="url(#hill)" d="M0,470 C200,430 330,452 520,446 C720,440 880,418 1060,440 C1230,460 1340,440 1440,452 L1440,600 L0,600Z"/>
+            <g fill="#0a1322">
+                <use href="#pine" x="40" y="400" width="70" height="116"/>
+                <use href="#pine" x="105" y="425" width="56" height="94"/>
+                <use href="#pine" x="170" y="412" width="64" height="106"/>
+                <use href="#pine" x="1230" y="405" width="68" height="112"/>
+                <use href="#pine" x="1295" y="428" width="54" height="90"/>
+                <use href="#pine" x="1350" y="410" width="72" height="118"/>
+                <use href="#pine" x="560" y="455" width="40" height="66"/>
+                <use href="#pine" x="610" y="462" width="34" height="56"/>
+            </g>
+            <g>
+                <rect x="1040" y="418" width="12" height="26" fill="#1c130d"/>
+                <rect x="940" y="456" width="130" height="62" fill="#24160f"/>
+                <polygon points="922,460 1005,404 1088,460" fill="#10182a"/>
+                <polygon points="922,460 1005,404 1088,460 1077,460 1005,414 933,460" fill="#e6eef8"/>
+                <g fill="#ffc46b" filter="url(#gl)">
+                    <rect x="958" y="478" width="18" height="22"/>
+                    <rect x="1034" y="478" width="18" height="22"/>
+                    <rect x="1000" y="488" width="16" height="30"/>
+                </g>
+            </g>
         </svg>
+        <svg id="lights" class="lights" viewBox="0 0 1440 110" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+            <defs><filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+            <path d="M-20,8 Q180,98 380,10 Q580,98 780,10 Q980,98 1180,10 Q1380,98 1580,10" fill="none" stroke="#223350" stroke-width="1.5"/>
+        </svg>
+        <canvas class="snow-canvas"></canvas>
         <div class="container hero-content">
-            <span class="eyebrow">11 — 13 décembre 2026</span>
-            <h1>Week-end ski<br><span>Vallée de Chamonix</span></h1>
-            <p class="hero-sub">Deux nuits au gîte La Loriaz, à Vallorcine, et une grande journée de glisse au pied du Mont-Blanc.</p>
-            <a href="programme.html" class="btn">Voir le programme</a>
+            <span class="kicker">11 — 13 décembre 2026 · Vallorcine</span>
+            <h1>Deux jours de ski, un chalet, <em>une raclette.</em></h1>
+            <p class="hero-sub">Un week-end entre amis dans la vallée de Chamonix : les pistes au pied du Mont-Blanc, un gîte tout en bois rien que pour nous, et le soir, le poêle, la neige qui tombe et les histoires de la journée.</p>
+            <a href="programme.html" class="btn">Le programme</a>
             <a href="budget.html" class="btn btn-ghost">Le budget</a>
         </div>
     </header>
 
-    <section class="facts">
-        <div class="container facts-grid">
-            <div class="fact"><strong>2</strong><span>nuits</span></div>
-            <div class="fact"><strong>15</strong><span>couchages</span></div>
-            <div class="fact"><strong>100 %</strong><span>gîte privatisé</span></div>
-            <div class="fact"><strong>Vallorcine</strong><span>bout de la vallée</span></div>
-        </div>
-    </section>
-
     <main>
         <section class="section">
-            <div class="container">
-                <div class="split">
-                    <div class="reveal">
-                        <span class="kicker">Le projet</span>
-                        <h2 class="h-section">Un week-end, un gîte, la montagne.</h2>
-                        <p class="lead">On part skier à plusieurs dans la vallée de Chamonix. Tout le gîte est pour nous, on s'organise en gestion libre — cuisine, repas, soirées — et on garde la journée de samedi pour le ski.</p>
+            <div class="container center">
+                <div class="reveal">
+                    <span class="eyebrow">L'idée</span>
+                    <p class="lead">Se lever dans le froid vif, chausser les skis sous un grand ciel bleu, rentrer les joues rouges retrouver un chalet chauffé, une table dressée pour quinze et le fromage qui fond.</p>
+                </div>
+                <div class="pillars">
+                    <div class="pillar reveal">
+                        <svg viewBox="0 0 48 48"><path d="M4 40 L18 14 L26 28 L31 20 L44 40 Z"/><path d="M14 22 L18 14 L22 22"/><path d="M33 12 L33 12.1"/></svg>
+                        <h3>Deux jours de ski</h3>
+                        <p>Samedi et dimanche sur les pistes de la vallée de Chamonix, au grand air, avec le Mont-Blanc en toile de fond.</p>
                     </div>
-                    <div class="info-box reveal">
-                        <h3>L'essentiel</h3>
-                        <ul>
-                            <li><b>Dates :</b> vendredi 11 → dimanche 13 décembre 2026</li>
-                            <li><b>Arrivée :</b> à partir de 17h le vendredi</li>
-                            <li><b>Départ :</b> avant 10h le dimanche</li>
-                            <li><b>Lieu :</b> gîte La Loriaz, hameau du Lay, Vallorcine</li>
-                            <li><b>Formule :</b> gestion libre, 15 personnes maximum</li>
-                        </ul>
+                    <div class="pillar reveal">
+                        <svg viewBox="0 0 48 48"><path d="M6 24 L24 8 L42 24"/><path d="M10 22 V40 H38 V22"/><path d="M20 40 V30 H28 V40"/><path d="M33 14 V9 H37 V17"/></svg>
+                        <h3>Un chalet pour nous</h3>
+                        <p>Le gîte La Loriaz est entièrement privatisé : quinze couchages, une grande table, une cuisine, du bois partout.</p>
+                    </div>
+                    <div class="pillar reveal">
+                        <svg viewBox="0 0 48 48"><path d="M24 6 C30 14 36 18 36 28 A12 12 0 0 1 12 28 C12 22 16 20 18 14 C20 18 22 18 24 6 Z"/><path d="M24 26 C27 30 29 32 27 36 A4 4 0 0 1 21 36 C20 33 22 31 24 26 Z"/></svg>
+                        <h3>Les soirées</h3>
+                        <p>Raclette, vin chaud, jeux de société : on se retrouve le soir, au chaud, pendant que la neige tombe dehors.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section section-ice">
+        <section class="section-paper2" style="padding: 0;">
+            <div class="container" style="padding-top: 70px; padding-bottom: 70px;">
+                <div class="band reveal">
+                    <figure class="photo"><img src="assets/chalet-neige.jpg" alt="Le gîte La Loriaz sous la neige"><figcaption>La Loriaz, sous la neige</figcaption></figure>
+                    <figure class="photo"><img src="assets/salle-a-manger.jpg" alt="La salle à manger du gîte"><figcaption>La grande table</figcaption></figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-night">
+            <div class="stars"></div>
+            <div class="container" style="position:relative;z-index:3;">
+                <span class="eyebrow">Le week-end en un regard</span>
+                <h2 class="h2">Du vendredi soir au dimanche soir</h2>
+                <div class="glance">
+                    <div class="reveal">
+                        <small>Vendredi 11</small>
+                        <h3>On monte</h3>
+                        <p>Départ de Paris ou d'ailleurs en voitures. Arrivée au gîte dès 17h, installation, premier dîner au chaud.</p>
+                    </div>
+                    <div class="reveal">
+                        <small>Samedi 12</small>
+                        <h3>Première journée de glisse</h3>
+                        <p>Journée entière de ski à Balme-Vallorcine, tout près du gîte. Le soir : raclette.</p>
+                    </div>
+                    <div class="reveal">
+                        <small>Dimanche 13</small>
+                        <h3>Deuxième journée, puis retour</h3>
+                        <p>Messe à 7h15, gîte libéré le matin, ski jusqu'à 16h30, puis retour direct vers Paris.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
             <div class="container">
-                <span class="kicker">Tout est ici</span>
-                <h2 class="h-section">Les infos du week-end</h2>
+                <span class="eyebrow">Tout est ici</span>
+                <h2 class="h2">Les infos pratiques</h2>
                 <div class="cards">
                     <a href="gite.html" class="card reveal">
-                        <h3>Le gîte</h3>
-                        <p>Chambres, dortoirs, ce que le gîte fournit, ce qu'il faut apporter, comment y venir.</p>
-                        <span class="more">Découvrir →</span>
+                        <figure class="photo"><img src="assets/facade-bois.jpg" alt="Façade en bois du chalet"></figure>
+                        <div class="card-body"><h3>Le gîte</h3><p>Les lits, les pièces, ce qu'on apporte, comment y arriver.</p><span class="more">Découvrir →</span></div>
                     </a>
                     <a href="programme.html" class="card reveal">
-                        <h3>Le programme</h3>
-                        <p>Vendredi soir, samedi sur les pistes, dimanche matin : le déroulé du week-end.</p>
-                        <span class="more">Voir le déroulé →</span>
+                        <figure class="photo"><img src="assets/village-neige.jpg" alt="Le village de Vallorcine sous la neige"></figure>
+                        <div class="card-body"><h3>Le programme</h3><p>Vendredi soir, samedi et dimanche, heure par heure. Les voitures et le trajet.</p><span class="more">Voir le déroulé →</span></div>
                     </a>
                     <a href="domaines.html" class="card reveal">
-                        <h3>Les domaines</h3>
-                        <p>Balme-Vallorcine, Grands Montets, Brévent-Flégère, Les Houches : où skier.</p>
-                        <span class="more">Choisir son domaine →</span>
+                        <figure class="photo"><img src="assets/montagne.jpg" alt="Montagnes enneigées au-dessus de Vallorcine"></figure>
+                        <div class="card-body"><h3>Les domaines</h3><p>Où on skie samedi, où on skie dimanche, et pourquoi.</p><span class="more">Choisir →</span></div>
                     </a>
                     <a href="budget.html" class="card reveal">
-                        <h3>Le budget</h3>
-                        <p>Le prix par personne selon le nombre de participants, et ce qu'il faut prévoir en plus.</p>
-                        <span class="more">Calculer →</span>
+                        <figure class="photo"><img src="assets/salon.jpg" alt="Le salon du gîte"></figure>
+                        <div class="card-body"><h3>Le budget</h3><p>Gîte, transport, repas, matériel : le coût par personne, simulé.</p><span class="more">Calculer →</span></div>
                     </a>
                 </div>
             </div>
         </section>
 
-        <section class="section section-dark">
-            <div class="container contact reveal">
-                <span class="kicker">Une question ?</span>
-                <h2 class="h-section">On en parle</h2>
-                <p>Organisation : <strong>Joseph Boulangé</strong></p>
-                <p>Groupe WhatsApp : <span class="tag">lien à ajouter</span></p>
+        <section class="section section-night center">
+            <div class="stars"></div>
+            <div class="container reveal" style="position:relative;z-index:3;">
+                <span class="eyebrow">Une question ?</span>
+                <h2 class="h2">On s'organise ensemble</h2>
+                <p class="muted">Organisation : <strong>Joseph Boulangé</strong></p>
+                <p class="muted" style="margin-top:6px;">Groupe WhatsApp : <span class="tag">lien à ajouter</span></p>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">11-13 décembre 2026 · Vallée de Chamonix</footer>
+    <footer class="site-footer">
+        <em>Vallée de Chamonix · 11–13 décembre 2026</em>
+        Photos du gîte : <a href="https://giteschamonix.com/portfolio/la-loriaz/" target="_blank" rel="noopener">Chalets de Vacances en Montagne</a>
+    </footer>
 
     <script src="script.js"></script>
 </body>

@@ -6,14 +6,14 @@
     <title>Programme · Week-end ski Chamonix</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="site-nav">
         <div class="container nav-inner">
-            <a href="index.html" class="nav-logo">Ski · Chamonix</a>
+            <a href="index.html" class="nav-logo">Ski <span>·</span> Chamonix</a>
             <div class="nav-links">
                 <a href="index.html">Accueil</a>
                 <a href="gite.html">Le gîte</a>
@@ -25,10 +25,12 @@
     </nav>
 
     <header class="page-head">
+        <div class="stars"></div>
+        <canvas class="snow-canvas"></canvas>
         <div class="container">
-            <span class="eyebrow">11 — 13 décembre 2026</span>
-            <h1>Le programme</h1>
-            <p>Arrivée vendredi soir, une grande journée de ski samedi, départ dimanche matin avant 10h.</p>
+            <span class="kicker">11 — 13 décembre 2026</span>
+            <h1>Le <em>programme</em></h1>
+            <p>Vendredi soir on monte, deux vraies journées de ski samedi et dimanche, et on rentre directement dimanche en fin d'après-midi.</p>
         </div>
     </header>
 
@@ -37,39 +39,71 @@
             <div class="container">
                 <div class="days">
                     <div class="day reveal">
-                        <div class="day-head"><small>Jour 1</small><h3>Vendredi 11</h3></div>
+                        <div class="day-head"><small>Jour 1</small><h3>Vendredi 11</h3><p>On monte, on s'installe, on dîne au chaud.</p></div>
                         <ul>
-                            <li><span class="when">Dès 17h</span><p>Arrivée au gîte La Loriaz (accès possible à partir de 17h). Installation et répartition des chambres.</p></li>
-                            <li><span class="when">Soirée</span><p>Dîner en gestion libre au gîte <span class="tag">menu à définir</span></p></li>
-                            <li><span class="when">Avant de dormir</span><p>Point sur la météo, le domaine et l'heure de départ du lendemain.</p></li>
+                            <li><span class="when">Après-midi / soirée</span><p>Départ de Paris ou d'ailleurs, en voiture. Chacun part selon ses horaires de travail.</p></li>
+                            <li><span class="when">Dès 17h</span><p>Le gîte est accessible. Arrivées échelonnées, installation, répartition des lits.</p></li>
+                            <li><span class="when">Soirée</span><p>Premier dîner tous ensemble, simple et chaud <span class="tag">menu à définir</span>. Un œil sur la météo, le matériel prêt pour demain.</p></li>
                         </ul>
                     </div>
                     <div class="day reveal">
-                        <div class="day-head"><small>Jour 2</small><h3>Samedi 12</h3></div>
+                        <div class="day-head"><small>Jour 2</small><h3>Samedi 12</h3><p>Première journée de ski. Le soir : raclette.</p></div>
                         <ul>
-                            <li><span class="when">Matin</span><p>Petit-déjeuner au gîte, matériel prêt, départ vers le domaine choisi.</p></li>
-                            <li><span class="when">Journée</span><p>Ski sur le domaine retenu <span class="tag">domaine à choisir</span></p></li>
-                            <li><span class="when">Soir</span><p>Retour au gîte, dîner collectif, soirée.</p></li>
+                            <li><span class="when">Matin</span><p>Petit-déjeuner, sacs, forfaits en poche, départ vers le domaine de Balme-Vallorcine, tout près du gîte.</p></li>
+                            <li><span class="when">Journée</span><p>Ski toute la journée. Déjeuner sur les pistes ou pique-nique.</p></li>
+                            <li><span class="when">Fin d'après-midi</span><p>Retour au gîte, vin chaud, douches, on se pose.</p></li>
+                            <li><span class="when">Soirée</span><p>Raclette devant la grande table, puis jeux de société <span class="tag">proposition</span></p></li>
                         </ul>
                     </div>
                     <div class="day reveal">
-                        <div class="day-head"><small>Jour 3</small><h3>Dimanche 13</h3></div>
+                        <div class="day-head"><small>Jour 3</small><h3>Dimanche 13</h3><p>Messe, deuxième journée de ski, retour direct.</p></div>
                         <ul>
-                            <li><span class="when">Matin</span><p>Petit-déjeuner, ménage et remise en ordre du gîte.</p></li>
-                            <li><span class="when">Avant 10h</span><p>Départ du gîte, obligatoire avant 10h.</p></li>
-                            <li><span class="when">Ensuite</span><p>Retour, ou dernière glisse si le forfait et l'enneigement le permettent <span class="tag">à voir</span></p></li>
+                            <li><span class="when">7h15</span><p>Messe <span class="tag">lieu à confirmer</span></p></li>
+                            <li><span class="when">Matin</span><p>Petit-déjeuner, ménage, valises dans les voitures. Le gîte est libéré avant 10h.</p></li>
+                            <li><span class="when">Journée</span><p>Deuxième journée de ski, sur un autre domaine : Grands Montets ou Flégère selon la neige.</p></li>
+                            <li><span class="when">16h30 – 17h</span><p>Fin de la session, départ direct pour Paris. Arrivée vers 23h30 – minuit.</p></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="note reveal">
-                    <strong>Horaires précis à venir.</strong> Le programme sera affiné une fois le domaine choisi et l'ouverture des pistes confirmée — début décembre, tout dépend de l'enneigement.
+                    <strong>Pourquoi libérer le gîte avant 10h le dimanche ?</strong> C'est simplement l'heure de fin de séjour fixée par le gîte : on rend les clés le matin, avec les voitures déjà chargées. Ça ne change rien au ski : on passe la journée entière sur les pistes, puis on repart directement vers Paris, sans avoir à revenir au gîte.
                 </div>
+                <div class="note reveal" style="margin-top:18px;">
+                    <strong>Horaires indicatifs.</strong> Ils seront précisés une fois le domaine confirmé et l'ouverture des pistes connue : début décembre, tout dépend de la neige.
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-paper2">
+            <div class="container">
+                <span class="eyebrow">Organisation</span>
+                <h2 class="h2">Les voitures</h2>
+                <p class="lead">Comme pour la Pointe Percée : plusieurs voitures partent de Paris ou d'ailleurs, chaque conducteur se signale, et les frais sont mutualisés.</p>
+                <div class="list-cols">
+                    <div class="list-col reveal">
+                        <h4>Aller</h4>
+                        <ul><li>Départ vendredi, de Paris ou d'ailleurs</li><li>Environ 4 personnes par voiture, avec skis et bagages</li><li>Liste des conducteurs <span class="tag">à établir</span></li></ul>
+                    </div>
+                    <div class="list-col reveal">
+                        <h4>Sur place</h4>
+                        <ul><li>Parking gratuit au gîte</li><li>Le domaine du samedi est tout proche</li><li>Le dimanche, voitures chargées avant de partir skier</li></ul>
+                    </div>
+                    <div class="list-col reveal">
+                        <h4>Retour</h4>
+                        <ul><li>Dimanche, direct depuis les pistes vers 17h</li><li>Environ 6 à 7 heures de route</li><li>Arrivée vers 23h30 – minuit</li></ul>
+                    </div>
+                </div>
+                <p class="muted" style="margin-top:28px;">Tous les frais de voiture sont additionnés et partagés à parts égales, pour que personne ne paie plus cher selon sa voiture. Détail sur la page <a href="budget.html">Budget</a>.</p>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">11-13 décembre 2026 · Vallée de Chamonix</footer>
+    <footer class="site-footer">
+        <em>Vallée de Chamonix · 11–13 décembre 2026</em>
+        Photos du gîte : <a href="https://giteschamonix.com/portfolio/la-loriaz/" target="_blank" rel="noopener">Chalets de Vacances en Montagne</a>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -6,14 +6,14 @@
     <title>Le gîte La Loriaz · Week-end ski Chamonix</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="site-nav">
         <div class="container nav-inner">
-            <a href="index.html" class="nav-logo">Ski · Chamonix</a>
+            <a href="index.html" class="nav-logo">Ski <span>·</span> Chamonix</a>
             <div class="nav-links">
                 <a href="index.html">Accueil</a>
                 <a href="gite.html" class="active">Le gîte</a>
@@ -25,114 +25,105 @@
     </nav>
 
     <header class="page-head">
+        <div class="stars"></div>
+        <canvas class="snow-canvas"></canvas>
         <div class="container">
-            <span class="eyebrow">Vallorcine · hameau du Lay</span>
-            <h1>Le gîte La Loriaz</h1>
-            <p>Un gîte de groupe entièrement privatisé, à l'entrée du village de Vallorcine, tout au bout de la vallée de Chamonix.</p>
+            <span class="kicker">Vallorcine · hameau du Lay</span>
+            <h1>Le gîte <em>La Loriaz</em></h1>
+            <p>Un chalet de groupe en vieux bois, tout au bout de la vallée de Chamonix, que nous aurons entièrement pour nous.</p>
         </div>
     </header>
 
     <main>
         <section class="section">
             <div class="container">
-                <div class="split">
-                    <div class="reveal">
-                        <div class="photo-slot">Photo du gîte<br>à ajouter</div>
-                        <p style="margin-top:14px;font-size:.95rem;"><a href="https://giteschamonix.com/portfolio/la-loriaz/" target="_blank" rel="noopener">Voir la fiche officielle du gîte →</a></p>
-                    </div>
-                    <div class="info-box reveal">
-                        <h3>Bon à savoir</h3>
-                        <ul>
-                            <li><b>Capacité :</b> 15 personnes maximum</li>
-                            <li><b>Formule :</b> privatisation complète, gestion libre</li>
-                            <li><b>Arrivée :</b> à partir de 17h</li>
-                            <li><b>Départ :</b> avant 10h</li>
-                            <li><b>Parking :</b> gratuit</li>
-                            <li><b>Gestionnaire :</b> Chalets de Vacances en Montagne (CVM)</li>
-                        </ul>
-                    </div>
+                <div class="gallery reveal">
+                    <figure class="photo"><img src="assets/chalet-neige.jpg" alt="Le gîte sous la neige"><figcaption>Le chalet sous la neige</figcaption></figure>
+                    <figure class="photo"><img src="assets/vue-fenetre.jpg" alt="Vue depuis une fenêtre du gîte"><figcaption>Vue depuis le gîte</figcaption></figure>
+                    <figure class="photo"><img src="assets/salle-a-manger.jpg" alt="La salle à manger"><figcaption>La salle à manger</figcaption></figure>
+                    <figure class="photo"><img src="assets/cuisine.jpg" alt="La cuisine"><figcaption>La cuisine</figcaption></figure>
+                    <figure class="photo"><img src="assets/salon.jpg" alt="Le salon"><figcaption>Le salon</figcaption></figure>
+                    <figure class="photo"><img src="assets/chambre.jpg" alt="Une chambre"><figcaption>Une chambre</figcaption></figure>
+                    <figure class="photo"><img src="assets/dortoir.jpg" alt="Un dortoir"><figcaption>Un dortoir</figcaption></figure>
                 </div>
+                <p class="muted center" style="margin-top:16px;font-size:.9rem;">Photos : <a href="https://giteschamonix.com/portfolio/la-loriaz/" target="_blank" rel="noopener">Chalets de Vacances en Montagne</a></p>
             </div>
         </section>
 
-        <section class="section section-ice">
+        <section class="section section-paper2">
             <div class="container">
-                <span class="kicker">Couchages</span>
-                <h2 class="h-section">Qui dort où ?</h2>
-                <p class="lead">15 lits simples répartis en une chambre et trois dortoirs. La répartition se fera ensemble sur place.</p>
+                <span class="eyebrow">Les couchages</span>
+                <h2 class="h2">Combien de lits, et où ?</h2>
+                <p class="lead">Quinze lits simples, répartis en une chambre et trois dortoirs. La répartition se fait ensemble en arrivant.</p>
                 <div class="rooms">
-                    <div class="room reveal">
-                        <h4>Chambre</h4><small>2 lits simples</small>
-                        <div class="beds"><span class="bed"></span><span class="bed"></span></div>
-                    </div>
-                    <div class="room reveal">
-                        <h4>Dortoir 1</h4><small>5 lits simples</small>
-                        <div class="beds"><span class="bed"></span><span class="bed"></span><span class="bed"></span><span class="bed"></span><span class="bed"></span></div>
-                    </div>
-                    <div class="room reveal">
-                        <h4>Dortoir 2</h4><small>4 lits simples</small>
-                        <div class="beds"><span class="bed"></span><span class="bed"></span><span class="bed"></span><span class="bed"></span></div>
-                    </div>
-                    <div class="room reveal">
-                        <h4>Dortoir 3</h4><small>4 lits simples</small>
-                        <div class="beds"><span class="bed"></span><span class="bed"></span><span class="bed"></span><span class="bed"></span></div>
-                    </div>
+                    <div class="room reveal"><h4>La chambre</h4><small>2 lits simples</small><div class="beds"><span class="bed"></span><span class="bed"></span></div></div>
+                    <div class="room reveal"><h4>Dortoir 1</h4><small>5 lits simples</small><div class="beds"><span class="bed"></span><span class="bed"></span><span class="bed"></span><span class="bed"></span><span class="bed"></span></div></div>
+                    <div class="room reveal"><h4>Dortoir 2</h4><small>4 lits simples</small><div class="beds"><span class="bed"></span><span class="bed"></span><span class="bed"></span><span class="bed"></span></div></div>
+                    <div class="room reveal"><h4>Dortoir 3</h4><small>4 lits simples</small><div class="beds"><span class="bed"></span><span class="bed"></span><span class="bed"></span><span class="bed"></span></div></div>
                 </div>
+                <p class="total-beds">En tout : <b>15 couchages</b> — le gîte est privatisé, personne d'autre n'y dort.</p>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
-                <span class="kicker">Pratique</span>
-                <h2 class="h-section">Ce que le gîte fournit, et ce qu'on apporte</h2>
+                <div class="split">
+                    <div class="reveal">
+                        <span class="eyebrow">Sur place</span>
+                        <h2 class="h2">Une vraie maison de montagne</h2>
+                        <p class="muted">Une cuisine équipée où cuisiner à plusieurs, une grande table en bois pour manger tous ensemble, un salon avec banquettes pour les soirées, des salles d'eau, et un parking gratuit devant la porte. Le gîte est en <strong>gestion libre</strong> : on fait les courses, on cuisine, on s'organise.</p>
+                    </div>
+                    <div class="box reveal">
+                        <h3>Les horaires</h3>
+                        <ul>
+                            <li><b>Arrivée :</b> à partir de 17h le vendredi</li>
+                            <li><b>Fin de séjour :</b> avant 10h le dimanche — on libère le gîte au matin, puis on part skier</li>
+                            <li><b>Capacité :</b> 15 personnes maximum</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="list-cols">
                     <div class="list-col reveal">
-                        <h4>Fourni</h4>
-                        <ul>
-                            <li>Draps housses</li>
-                            <li>Oreillers et taies</li>
-                            <li>Parking gratuit</li>
-                        </ul>
+                        <h4>Fourni par le gîte</h4>
+                        <ul><li>Draps housses</li><li>Oreillers et taies</li><li>Parking gratuit</li></ul>
                     </div>
                     <div class="list-col reveal">
                         <h4>À apporter</h4>
-                        <ul>
-                            <li>Sac de couchage ou couette + housse</li>
-                            <li>Courses du week-end (gestion libre)</li>
-                        </ul>
+                        <ul><li>Sac de couchage, ou couette et housse</li><li>Les courses du week-end</li><li>Un appareil à raclette <span class="tag">à voir</span></li></ul>
                     </div>
                     <div class="list-col reveal">
-                        <h4>À confirmer <span class="tag">auprès du gîte</span></h4>
-                        <ul>
-                            <li>Linge de toilette (fourni ou non)</li>
-                            <li>Équipement de la cuisine</li>
-                            <li>Local à skis</li>
-                            <li>Règles de la maison et ménage de fin de séjour</li>
-                        </ul>
+                        <h4>À confirmer avec le gîte</h4>
+                        <ul><li>Linge de toilette</li><li>Local à skis / chaussures</li><li>Arrivée tardive le vendredi soir</li></ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section section-dark">
-            <div class="container">
-                <span class="kicker">Y aller</span>
-                <h2 class="h-section">Accès</h2>
-                <div class="split" style="margin-top:30px;">
+        <section class="section section-night">
+            <div class="stars"></div>
+            <div class="container" style="position:relative;z-index:3;">
+                <span class="eyebrow">Y aller</span>
+                <h2 class="h2">Vallorcine, tout au bout de la vallée</h2>
+                <div class="split" style="margin-top:28px;align-items:start;">
                     <div class="reveal">
-                        <h3 style="font-size:1.8rem;margin-bottom:8px;">En voiture</h3>
-                        <p>Vallorcine se trouve au bout de la vallée, à une vingtaine de minutes de Chamonix. Le gîte offre un parking gratuit. Le trajet exact et le covoiturage sont à organiser dans le groupe.</p>
+                        <h3 style="font-size:1.7rem;margin-bottom:8px;">En voiture</h3>
+                        <p class="muted">C'est le plan principal : plusieurs voitures partent de Paris ou d'ailleurs le vendredi. Compter 6 à 7 heures de route depuis Paris, sans passer par le tunnel du Mont-Blanc. Le gîte offre un parking gratuit. Les conducteurs se signalent et les frais sont partagés — voir <a href="budget.html" style="color:var(--ember)">le budget</a>.</p>
                     </div>
                     <div class="reveal">
-                        <h3 style="font-size:1.8rem;margin-bottom:8px;">En train</h3>
-                        <p>Le gîte est proche des gares de Vallorcine et du Buet. Horaires et correspondances depuis Paris ou Genève <span class="tag">à vérifier</span>.</p>
+                        <h3 style="font-size:1.7rem;margin-bottom:8px;">En train</h3>
+                        <p class="muted">Le gîte est proche des gares de Vallorcine et du Buet, desservies par le train de la vallée. Une option pour qui n'a pas de place en voiture <span class="tag">à étudier</span>.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">11-13 décembre 2026 · Vallée de Chamonix</footer>
+    <footer class="site-footer">
+        <em>Vallée de Chamonix · 11–13 décembre 2026</em>
+        Photos du gîte : <a href="https://giteschamonix.com/portfolio/la-loriaz/" target="_blank" rel="noopener">Chalets de Vacances en Montagne</a>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

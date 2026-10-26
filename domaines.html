@@ -6,14 +6,14 @@
     <title>Domaines skiables · Week-end ski Chamonix</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="site-nav">
         <div class="container nav-inner">
-            <a href="index.html" class="nav-logo">Ski · Chamonix</a>
+            <a href="index.html" class="nav-logo">Ski <span>·</span> Chamonix</a>
             <div class="nav-links">
                 <a href="index.html">Accueil</a>
                 <a href="gite.html">Le gîte</a>
@@ -25,10 +25,12 @@
     </nav>
 
     <header class="page-head">
+        <div class="stars"></div>
+        <canvas class="snow-canvas"></canvas>
         <div class="container">
-            <span class="eyebrow">Où skier</span>
-            <h1>Les domaines</h1>
-            <p>La vallée de Chamonix compte plusieurs domaines très différents. On en choisira un ensemble, selon le niveau du groupe et l'enneigement.</p>
+            <span class="kicker">Où skier</span>
+            <h1>Les <em>domaines</em></h1>
+            <p>Début décembre, la neige décide. On part sur ce qui a le plus de chances d'être bien enneigé, en limitant les trajets.</p>
         </div>
     </header>
 
@@ -36,40 +38,48 @@
         <section class="section">
             <div class="container">
                 <div class="areas">
-                    <div class="area reveal" data-n="1">
+                    <div class="area pick reveal">
+                        <span class="when-ski">Notre choix du samedi</span>
                         <h3>Balme – Vallorcine</h3>
-                        <div class="vibe">Le plus proche du gîte</div>
-                        <p>Le domaine de Vallorcine, relié à celui du Tour par le col de Balme. Il se rejoint depuis le village même où se trouve le gîte.</p>
-                        <p class="for"><b>Idéal pour :</b> limiter les trajets et skier tranquillement.</p>
+                        <div class="vibe">À deux pas du gîte</div>
+                        <p>Le domaine de Vallorcine, relié à celui du Tour. On y est en quelques minutes, sans route de montagne à avaler, et la neige y tient mieux qu'en bas de vallée.</p>
+                        <div class="snow"><span>Neige début décembre</span><b>Bonne</b></div>
                     </div>
-                    <div class="area reveal" data-n="2">
+                    <div class="area pick reveal">
+                        <span class="when-ski">Notre choix du dimanche</span>
                         <h3>Les Grands Montets</h3>
-                        <div class="vibe">Le domaine des skieurs confirmés</div>
-                        <p>Au départ d'Argentière, réputé pour ses pentes soutenues et son hors-piste.</p>
-                        <p class="for"><b>Idéal pour :</b> un groupe à l'aise sur les pistes difficiles.</p>
+                        <div class="vibe">Le grand domaine d'altitude</div>
+                        <p>Au départ d'Argentière, sur la route du retour. Un grand domaine où chacun trouve son rythme, avec de belles descentes en altitude. Pour tout le monde — c'est pour ça qu'on y va le dimanche, une fois les jambes chauffées.</p>
+                        <div class="snow"><span>Neige début décembre</span><b>Bonne en altitude</b></div>
                     </div>
-                    <div class="area reveal" data-n="3">
+                    <div class="area reveal">
+                        <span class="when-ski">Solution de repli</span>
                         <h3>Brévent – Flégère</h3>
-                        <div class="vibe">La vue sur le Mont-Blanc</div>
-                        <p>Deux domaines voisins, face au massif du Mont-Blanc, au-dessus de Chamonix.</p>
-                        <p class="for"><b>Idéal pour :</b> skier avec un panorama exceptionnel.</p>
+                        <div class="vibe">Face au Mont-Blanc</div>
+                        <p>Deux domaines voisins au-dessus de Chamonix, avec la vue sur tout le massif. Une très bonne alternative pour le dimanche si on préfère rester côté Chamonix.</p>
+                        <div class="snow"><span>Neige début décembre</span><b>Correcte</b></div>
                     </div>
-                    <div class="area reveal" data-n="4">
+                    <div class="area reveal">
+                        <span class="when-ski">Seulement si la neige est là</span>
                         <h3>Les Houches</h3>
-                        <div class="vibe">Le domaine le plus accessible</div>
-                        <p>À l'entrée de la vallée, avec des pistes en forêt, plus abritées par mauvais temps.</p>
-                        <p class="for"><b>Idéal pour :</b> tous niveaux, et les jours de météo difficile.</p>
+                        <div class="vibe">Pistes en forêt, ambiance tranquille</div>
+                        <p>Un domaine sympa, mais bas en altitude : début décembre, il risque de manquer de neige. On y va seulement si les chutes ont été généreuses.</p>
+                        <div class="snow"><span>Neige début décembre</span><b>Incertaine</b></div>
                     </div>
                 </div>
 
                 <div class="note reveal">
-                    <strong>Forfait.</strong> Le forfait Mont-Blanc Unlimited ouvre les domaines de la vallée. Notre devis mentionne un forfait remontées mécaniques : son périmètre exact (qui, combien de jours, quels domaines) est <strong>à confirmer auprès du gîte</strong>. Ouverture des pistes et tarifs à vérifier sur les sites officiels avant le départ.
+                    <strong>Forfait.</strong> Le forfait Mont-Blanc Unlimited ouvre les domaines de la vallée. Le devis du gîte mentionne un « forfait remontées mécaniques » dont le périmètre reste à confirmer <span class="tag">à confirmer</span>. Ouvertures et tarifs à vérifier sur les sites officiels avant le départ.
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">11-13 décembre 2026 · Vallée de Chamonix</footer>
+    <footer class="site-footer">
+        <em>Vallée de Chamonix · 11–13 décembre 2026</em>
+        Photos du gîte : <a href="https://giteschamonix.com/portfolio/la-loriaz/" target="_blank" rel="noopener">Chalets de Vacances en Montagne</a>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
