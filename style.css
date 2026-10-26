@@ -284,3 +284,30 @@ details.how li { margin-bottom: 6px; }
     .btn-ghost { margin: 12px 0 0 0; }
     .hero-content { padding-bottom: 170px; }
 }
+
+/* Plans des pistes */
+.map-full { display: block; margin-top: 18px; background: #fff; padding: 10px; box-shadow: 0 10px 30px rgba(29,36,51,0.08); }
+.map-full img { width: 100%; height: auto; }
+.map-thumb { display: block; margin-top: 16px; border: 1px solid var(--line); background: #fff; }
+.map-thumb img { width: 100%; height: auto; transition: opacity .3s; }
+.map-thumb:hover img { opacity: .88; }
+.map-credit { font-size: 0.85rem; color: var(--ink-soft); margin-top: 12px; }
+.areas { margin-top: 70px; }
+
+/* Étiquettes obligatoire / facultatif */
+.tag-req, .tag-opt { display: inline-block; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 1px 9px; margin-left: 8px; font-weight: 500; vertical-align: middle; white-space: nowrap; }
+.tag-req { background: var(--berry); color: #fff; border: 1px solid var(--berry); }
+.tag-opt { background: transparent; color: var(--ink-soft); border: 1px solid #b9b1a0; }
+.list-col ul.em li { padding-left: 0; }
+.list-col ul.em li::before { display: none; }
+
+/* Cartes : 3 puis 2 */
+.cards { grid-template-columns: repeat(6, 1fr); }
+.card { grid-column: span 2; }
+.card:nth-child(n+4) { grid-column: span 3; }
+.scen { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 860px) {
+    .cards { grid-template-columns: 1fr; }
+    .card, .card:nth-child(n+4) { grid-column: auto; }
+    .scen { grid-template-columns: 1fr; }
+}

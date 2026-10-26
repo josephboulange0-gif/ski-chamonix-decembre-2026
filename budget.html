@@ -19,6 +19,7 @@
                 <a href="gite.html">Le gîte</a>
                 <a href="programme.html">Programme</a>
                 <a href="domaines.html">Domaines</a>
+                <a href="equipement.html">Équipement</a>
                 <a href="budget.html" class="active">Budget</a>
             </div>
         </div>
@@ -28,9 +29,9 @@
         <div class="stars"></div>
         <canvas class="snow-canvas"></canvas>
         <div class="container">
-            <span class="kicker">Gîte, route, repas, matériel</span>
+            <span class="kicker">Gîte, voiture, repas, matériel</span>
             <h1>Le <em>budget</em></h1>
-            <p>Une simulation par personne. Le gîte est privatisé : son prix est fixe et se partage entre tous les participants.</p>
+            <p>Les forfaits de remontées sont compris dans le devis du gîte. Le prix du gîte est fixe et se partage entre tous les participants.</p>
         </div>
     </header>
 
@@ -44,15 +45,13 @@
                         <input type="range" id="people" min="6" max="15" value="15">
                         <div class="scale"><span>6</span><span>15 (maximum)</span></div>
 
-                        <label class="opt"><input type="checkbox" id="opt-lift" checked><span>Forfait remontées 2 jours à ma charge<small>Tarif de début de saison estimé — à décocher s'il est finalement compris dans le devis.</small></span></label>
                         <label class="opt"><input type="checkbox" id="opt-rental"><span>Je loue mon matériel de ski<small>Skis, chaussures, bâtons et casque pour 2 jours.</small></span></label>
                     </div>
                     <div class="calc-right">
                         <ul class="lines">
-                            <li><span>Gîte et taxe de séjour</span><b id="v-lodging"></b></li>
-                            <li><span>Voitures (mutualisées)</span><b id="v-transport"></b></li>
+                            <li><span>Gîte, forfaits et taxe de séjour</span><b id="v-lodging"></b></li>
+                            <li><span>Voiture (frais partagés)</span><b id="v-transport"></b></li>
                             <li><span>Repas du week-end</span><b id="v-food"></b></li>
-                            <li id="l-lift"><span>Forfait remontées</span><b id="v-lift"></b></li>
                             <li id="l-rental" class="off"><span>Location de matériel</span><b id="v-rental"></b></li>
                         </ul>
                         <div class="sum">
@@ -63,40 +62,24 @@
                 </div>
 
                 <div class="scen">
-                    <div class="reveal"><h4>J'ai mon matériel</h4><small>Forfait compris dans le devis (si confirmé)</small><div class="v" id="scen-a"></div></div>
-                    <div class="reveal"><h4>J'ai mon matériel</h4><small>Forfait à payer en plus</small><div class="v" id="scen-b"></div></div>
-                    <div class="reveal"><h4>Je loue tout</h4><small>Matériel et forfait à payer</small><div class="v" id="scen-c"></div></div>
+                    <div class="reveal"><h4>J'ai mon matériel</h4><small>Gîte + forfaits, voiture, repas</small><div class="v" id="scen-a"></div></div>
+                    <div class="reveal"><h4>Je loue mon matériel</h4><small>Même chose, plus la location</small><div class="v" id="scen-b"></div></div>
                 </div>
 
                 <span class="eyebrow" style="margin-top:80px;">Poste par poste</span>
-                <h2 class="h2">Le détail de la simulation</h2>
+                <h2 class="h2">Le détail</h2>
                 <div class="table-wrap reveal">
                     <table class="sim">
-                        <thead><tr><th>Poste</th><th>Hypothèse</th><th class="num">Par personne</th></tr></thead>
+                        <thead><tr><th>Poste</th><th>Détail</th><th class="num">Par personne</th></tr></thead>
                         <tbody>
-                            <tr><td>Gîte La Loriaz</td><td>2 nuits, gîte privatisé en gestion libre, 1 650 € pour 15 personnes max, + adhésion de groupe 50 € + taxe de séjour 0,80 € par nuit et par personne. Total du devis : 1 724 € à 15.<small>Si on est moins nombreux, le prix par personne augmente : le gîte est privatisé.</small></td><td class="num">~115 € à 15<br>~172 € à 10</td></tr>
-                            <tr><td>Voitures</td><td>4 personnes par voiture (skis et bagages), environ 280 € l'aller-retour par voiture (essence et péages sur 600 km). Tous les frais sont additionnés puis divisés à parts égales entre tous.</td><td class="num">~70 – 90 €</td></tr>
-                            <tr><td>Repas</td><td>Courses pour tout le week-end : 2 petits-déjeuners, dîner du vendredi, raclette du samedi, déjeuners sur les pistes, apéro et vin chaud.</td><td class="num">~60 €</td></tr>
-                            <tr><td>Matériel de ski</td><td>Pack skis, chaussures, bâtons, avec casque, environ 25 à 35 € par jour. Seulement pour qui n'a pas son matériel.</td><td class="num">~60 €</td></tr>
-                            <tr><td>Forfait remontées</td><td>Forfait 2 jours de la vallée, environ 150 à 200 € en début de saison selon les revendeurs.</td><td class="num">~160 €</td></tr>
-                            <tr class="total"><td>Total, matériel perso et forfait à payer</td><td></td><td class="num">~410 €</td></tr>
+                            <tr><td>Gîte La Loriaz</td><td>2 nuits, gîte privatisé en gestion libre, forfait remontées Mont-Blanc Unlimited compris : 1 650 € pour 15 personnes max. S'y ajoutent l'adhésion de groupe (50 €) et la taxe de séjour (0,80 € par nuit et par personne). Total du devis : 1 724 € à 15.<small>Si on est moins nombreux, le prix par personne augmente : le gîte est privatisé.</small></td><td class="num">~115 € à 15<br>~172 € à 10</td></tr>
+                            <tr><td>Voiture</td><td>Essence et péages de toutes les voitures, additionnés puis divisés à parts égales entre tous.</td><td class="num">~50 €</td></tr>
+                            <tr><td>Repas</td><td>Courses du week-end au gîte.</td><td class="num">~20 €</td></tr>
+                            <tr><td>Location de matériel</td><td>Skis, chaussures, bâtons et casque. Seulement pour qui n'a pas son matériel.</td><td class="num">~60 €</td></tr>
+                            <tr class="total"><td>Total sans location</td><td></td><td class="num">~185 €</td></tr>
+                            <tr class="total"><td>Total avec location</td><td></td><td class="num">~245 €</td></tr>
                         </tbody>
                     </table>
-                </div>
-
-                <details class="how reveal">
-                    <summary>D'où viennent ces estimations ?</summary>
-                    <ul>
-                        <li>Le gîte vient du devis de Chalets de Vacances en Montagne, calculé pour 15 personnes.</li>
-                        <li>Le forfait : tarifs 2026-2027 du Mont-Blanc Unlimited relevés chez les revendeurs, à vérifier sur le site officiel avant d'acheter.</li>
-                        <li>La location : fourchette courante des loueurs de Chamonix, à confirmer en réservant en ligne, souvent moins chère qu'en magasin.</li>
-                        <li>La route : environ 565 à 630 km depuis Paris selon l'itinéraire, avec essence et péages à partir des estimations d'itinéraire.</li>
-                        <li>Les repas : estimation maison, à ajuster au menu choisi.</li>
-                    </ul>
-                </details>
-
-                <div class="note reveal">
-                    <strong>Forfait remontées à confirmer.</strong> Le devis du gîte parle d'un « forfait remontées mécaniques » dont on ne connaît pas le périmètre exact (pour qui, combien de jours). On décoche la case du forfait dans la simulation si on apprend qu'il est inclus.
                 </div>
             </div>
         </section>

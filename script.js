@@ -87,51 +87,36 @@ function initBudget() {
     const slider = document.getElementById('people');
     if (!slider) return;
 
-    const LODGING_FIXED = 1650 + 50;      // devis CVM : 2 nuits + adhésion groupe
+    const LODGING_FIXED = 1650 + 50;      // devis CVM : 2 nuits (forfait Mont-Blanc Unlimited compris) + adhésion groupe
     const TAX_PER_PERSON = 0.8 * 2;       // taxe de séjour, 2 nuits
-    const CAR_COST = 280;                 // estimation A/R par voiture (essence + péages)
-    const PEOPLE_PER_CAR = 4;             // skis + bagages
-    const FOOD = 60;                      // estimation repas du week-end
-    const LIFT = 160;                     // estimation forfait 2 jours
-    const RENTAL = 60;                    // estimation location matériel 2 jours
+    const TRANSPORT = 50;                 // voiture, frais partagés (retour d'expérience Pointe Percée)
+    const FOOD = 20;                      // repas du week-end
+    const RENTAL = 60;                    // location matériel de ski, 2 jours
 
     const euro = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
     const $ = id => document.getElementById(id);
 
-    const compute = () => {
-        const n = Number(slider.value);
-        const cars = Math.ceil(n / PEOPLE_PER_CAR);
-        const lodging = (LODGING_FIXED + TAX_PER_PERSON * n) / n;
-        const transport = (cars * CAR_COST) / n;
-        return { n, cars, lodging, transport };
-    };
-
     const update = () => {
-        const { n, cars, lodging, transport } = compute();
-        const withLift = $('opt-lift').checked;
+        const n = Number(slider.value);
+        const lodging = (LODGING_FIXED + TAX_PER_PERSON * n) / n;
         const withRental = $('opt-rental').checked;
 
         $('people-out').textContent = n;
         $('v-lodging').textContent = euro.format(lodging);
-        $('v-transport').textContent = euro.format(transport);
+        $('v-transport').textContent = euro.format(TRANSPORT);
         $('v-food').textContent = euro.format(FOOD);
-        $('l-lift').classList.toggle('off', !withLift);
-        $('l-rental').classList.toggle('off', !withRental);
-        $('v-lift').textContent = euro.format(LIFT);
         $('v-rental').textContent = euro.format(RENTAL);
+        $('l-rental').classList.toggle('off', !withRental);
 
-        const total = lodging + transport + FOOD + (withLift ? LIFT : 0) + (withRental ? RENTAL : 0);
-        $('per-person').textContent = euro.format(total);
-        $('hint').textContent = cars + ' voiture' + (cars > 1 ? 's' : '') + ' · gîte : ' + euro.format(LODGING_FIXED + TAX_PER_PERSON * n) + ' à partager';
+        const base = lodging + TRANSPORT + FOOD;
+        $('per-person').textContent = euro.format(base + (withRental ? RENTAL : 0));
+        $('hint').textContent = 'Gîte : ' + euro.format(LODGING_FIXED + TAX_PER_PERSON * n) + ' à partager entre ' + n + ' personnes';
 
-        const base = lodging + transport + FOOD;
         $('scen-a').textContent = euro.format(base);
-        $('scen-b').textContent = euro.format(base + LIFT);
-        $('scen-c').textContent = euro.format(base + LIFT + RENTAL);
+        $('scen-b').textContent = euro.format(base + RENTAL);
     };
 
     slider.addEventListener('input', update);
-    $('opt-lift').addEventListener('change', update);
     $('opt-rental').addEventListener('change', update);
     update();
 }
